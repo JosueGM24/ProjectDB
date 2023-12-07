@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title=""
+             x:Name="contentPageLogin"
+             x:Class="ProjectDB.MainPage">
+
+    <StackLayout>
+        <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            Spacing="25">
+            
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Inicia sesión"
+                FontAttributes="Bold"
+                FontFamily="Poppins"
+                FontSize="39"/>
+            <Frame
+                WidthRequest="100"
+                HeightRequest="30"
+                Padding="0"
+                BackgroundColor="White"
+                CornerRadius="10">
+                <Image
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Aspect="AspectFill"
+                    IsVisible="False"
+                Source="load.gif"
+                x:Name="loader"
+                WidthRequest="30"/>
+            </Frame>
+            <Image
+                x:Name="imageLogin"
+                WidthRequest="150"
+                HeightRequest="150"/>
+            <VerticalStackLayout>
+                <Label
+                    Text="Username"
+                    FontSize="15"
+                    FontFamily="Poppins"/>
+                <Entry
+                    TextChanged="continueBtn_Clicked"
+                    WidthRequest="300"
+                    x:Name="userEntry"
+                    TextColor="Black"
+                    Placeholder="@"
+                    Background="White"
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="Poppins"/>
+
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                    Text="Password"
+                    FontSize="15"
+                    FontFamily="Poppins"/>
+                <Entry
+                    WidthRequest="300"
+                    x:Name="passwordEntry"
+                    IsPassword="True"
+                    TextColor="Black"
+                    Placeholder="..."
+                    Background="White"
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="Poppins"/>
+
+            </VerticalStackLayout>
+            <Label
+                    x:Name="errorMessage"
+                    TextColor="#B15959"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    FontFamily="Poppins"
+                />
+
+            <VerticalStackLayout>
+                <Button
+                    x:Name="continueBtn"
+                    Clicked="Log_in"
+                    TextColor="Black"
+                    Text="Log in"
+                    FontFamily="Poppins"
+                    FontAttributes="Bold"
+                    WidthRequest="200"
+                    BackgroundColor="#89D2C7"/>
+                <Button
+                    x:Name="signUpBtn"
+                    WidthRequest="200"
+                    Clicked="signUpBtn_Clicked"
+                    TextColor="White"
+                    Text="Sign up"
+                    FontFamily="Poppins"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"/>
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </StackLayout>
+
+</ContentPage>

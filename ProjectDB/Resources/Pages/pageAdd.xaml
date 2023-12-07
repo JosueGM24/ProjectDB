@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectDB.Resources.Pages.pageAdd"
+             Title="pageAdd">
+    <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            Spacing="25">
+        <VerticalStackLayout>
+            <Label
+                    Text="Name"
+                    FontSize="15"
+                    FontFamily="Poppins"/>
+            <Entry
+                    
+                    WidthRequest="300"
+                    x:Name="name"
+                    TextColor="Black"
+                    Placeholder=""
+                    Background="White"
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="Poppins"/>
+
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                    Text="Lastname1"
+                    FontSize="15"
+                    FontFamily="Poppins"/>
+            <Entry
+                    
+                    WidthRequest="300"
+                    x:Name="lastname1"
+                    TextColor="Black"
+                    Placeholder=""
+                    Background="White"
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="Poppins"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+                <Label
+                    Text="Lastname2"
+                    FontSize="15"
+                    FontFamily="Poppins"/>
+                <Entry
+                     
+                    WidthRequest="300"
+                    x:Name="lastname2"
+                    TextColor="Black"
+                    Placeholder=""
+                    Background="White"
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="Poppins"/>
+
+            </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                    Text="Age"
+                    FontSize="15"
+                    FontFamily="Poppins"/>
+            <Entry
+                     
+                    WidthRequest="300"
+                    x:Name="age"
+                    TextColor="Black"
+                    Placeholder=""
+                    Background="White"
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="Poppins"/>
+
+        </VerticalStackLayout>
+        <Picker
+            x:Name="pickerGroup">
+            <Picker.Items>
+            </Picker.Items>
+        </Picker>
+        <VerticalStackLayout>
+            <Button
+                    x:Name="addBtn"
+                    Clicked="addBtn_Clicked"
+                    TextColor="Black"
+                    Text="Add"
+                    FontFamily="Poppins"
+                    FontAttributes="Bold"
+                    WidthRequest="200"
+                    BackgroundColor="#89D2C7"/>
+            <Button
+                    x:Name="cancelBtn"
+                    WidthRequest="200"
+                    Clicked="cancelBtn_Clicked"
+                    TextColor="White"
+                    Text="Cancel"
+                    FontFamily="Poppins"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
